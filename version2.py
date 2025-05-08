@@ -43,11 +43,12 @@ while True :
                     
                    
     h, w, _ = frame.shape         
-    print(top, bottom, h)     
-    if frame_ready and 0 <= top < bottom <= h:
-        cropped = frame[top:bottom, 0:w]
-        cv2.imshow("Cropped", cropped)
-    else:
+    print("height" ,h)     
+    try :
+        if frame_ready and 0 <= top < bottom <= h :
+            cropped = frame[top:bottom, 0:w]
+            cv2.imshow("Cropped", cropped)
+    except:
         # ถ้ายังไม่พร้อม แสดงภาพเต็ม
         cv2.imshow("Cropped", frame)
         
