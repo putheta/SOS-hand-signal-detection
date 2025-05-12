@@ -66,7 +66,7 @@ while True :
                                 max_ = Ty_8  
                             if Ty_8 < min_:
                                 min_ = Ty_8
-                            # cv2.circle(frame, (Tx_8, Ty_8), h2//15, (0, 255, 0), cv2.FILLED)
+                            cv2.circle(frame, (Tx_8, Ty_8), h2//15, (0, 255, 0), cv2.FILLED)
                             # print("height : ",h2)
                             # print("height/1.5 = ",h2//1.7)
                             # print("min-max = ", max_-min_)
@@ -89,10 +89,10 @@ while True :
                 
                 if id == 4 :
                     Tx_4 , Ty_4 = cx,cy 
-                    # cv2.circle(frame, (Tx_4, Ty_4), 6, (0, 255, 0), cv2.FILLED)
+                    cv2.circle(frame, (Tx_4, Ty_4), 6, (0, 255, 0), cv2.FILLED)
                 if id == 13 :
                     Tx_13 , Ty_13 =  cx,cy
-                    # cv2.circle(frame, (Tx_13, Ty_13), 6, (0, 0, 255), cv2.FILLED)
+                    cv2.circle(frame, (Tx_13, Ty_13), 6, (0, 0, 255), cv2.FILLED)
                     try :
                         if abs(Tx_4-Tx_13) <= ((h2/8)+5) :
                             check[0] = 1
