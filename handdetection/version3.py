@@ -1,10 +1,20 @@
 import cv2
 import mediapipe as mp
+import os
+
+import datetime
+
+import geocoder
+g = geocoder.ip('me')
+location = g.city + ", " + g.country if g.ok else "Unknown location"
 
 vid = cv2.VideoCapture(0)
 # vid = cv2.VideoCapture(1)
 # vid = cv2.VideoCapture(r"C:\Users\puthe\Pictures\Camera Roll\WIN_20250508_12_27_12_Pro.mp4")
 
+
+os.chdir(os.path.dirname(__file__))
+save_path = "static"
 check = [0,0]
 mphands = mp.solutions.hands
 Hands = mphands.Hands(max_num_hands= 1, min_detection_confidence= 0.7, min_tracking_confidence= 0.6 )
@@ -14,6 +24,8 @@ count = 0
 top = 0
 bottom = 0
 max_height = 0 
+
+SOS_Count = 0
 
 closed_program = 0
 
@@ -67,9 +79,27 @@ while True :
               
                             
                             if abs((h2//1.5) -( max_-min_)) <= (0.0016 * h2**2 - 0.459 * h2 + 37.25):
-                                cv2.putText(frame, "SOS" , (Tx_8,Ty_8), cv2.FONT_HERSHEY_SIMPLEX, 2,(0,0,255), 5) 
+                                # cv2.putText(frame, "SOS" , (Tx_8,Ty_8), cv2.FONT_HERSHEY_SIMPLEX, 2,(0,0,255), 5) 
+                                
+                                now = datetime.datetime.now().strftime("%Y-%m-%d_%H:%M:%S")
+                                cv2.putText(frame, f"Location: {location}", (10, 60),
+                                cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 0), 2)
+                                cv2.putText(frame, f"Time: {now}", (10, 30),
+                                cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 255), 2)
+                                
+                                
+                                if(SOS_Count == 0) :
+                                    print("SOS")
+                                    SOS_Count+=1
+                                    now2 = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+                                    filename = f"{save_path}/capture_{now2}.jpg"
+                                    cv2.imwrite(filename,frame)
+                                    print(f"บันทึกภาพ {filename}")
+                                  
                                 # cv2.waitKey(3000)
                                 # closed_program = 1
+                            else :
+                                SOS_Count = 0 
                                 
                           
                     except : 
