@@ -59,7 +59,9 @@ with mp_face_detection.FaceDetection(model_selection=1, min_detection_confidence
                     print("✅ เจอใบหน้าและมีการแปลงเป็น encoding แล้ว")
                     # Compare the face with known faces
                     matches = face_recognition.compare_faces(known_encodings, face_encoding[0])
+                    
                     name = "Unknown"
+                    
                     
                     # Find the best match (lowest distance)
                     face_distances = face_recognition.face_distance(known_encodings, face_encoding[0])
