@@ -16,7 +16,7 @@ def detect_hand_sos(video_source=0):
 
     # หาตำแหน่งที่อยู่
     g = geocoder.ip('me')
-    location = g.city + ", " + g.country if g.ok else "Unknown location"
+    location = g.latlng if g.ok else "Unknown location"
 
     vid = cv2.VideoCapture(video_source)
 
