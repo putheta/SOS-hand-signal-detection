@@ -29,7 +29,6 @@ async def test_sending():
         with open(abs_path,"rb") as f :
             image_data = f.read()
 
-        # เตรียมข้อมูล
         data = {
             "name": name,
             "date": date,
@@ -39,7 +38,6 @@ async def test_sending():
             #, "path": url_path
         }
 
-        # เชื่อม MongoDB
         client = AsyncIOMotorClient(MONGO_URI, serverSelectionTimeoutMS=5000)
         db = client["sos-app"]
         collection = db["sos"]
