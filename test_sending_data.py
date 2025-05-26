@@ -40,7 +40,7 @@ async def test_sending():
 
         client = AsyncIOMotorClient(MONGO_URI, serverSelectionTimeoutMS=5000)
         db = client["sos-app"]
-        collection = db["sos"]
+        collection = db["sos_alerts"]
 
         result = await collection.insert_one(data)
         print("✅ Inserted ID:", result.inserted_id)
