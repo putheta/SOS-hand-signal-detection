@@ -1,13 +1,13 @@
 from motor.motor_asyncio import AsyncIOMotorClient
 import asyncio
 
-MONGO_URI = "mongodb+srv://Punyisa:Mail2004@sos-app.gqbtj58.mongodb.net/?retryWrites=true&w=majority&tls=true&appName=sos-app"
+MONGO_URI = "mongodb+srv://putheta_db_user:1ol0V9e7EaccVWI6@sos-cluster.rgwbko8.mongodb.net/?appName=SOS-Cluster"
 
 async def fetch_all_docs():
     try:
         client = AsyncIOMotorClient(MONGO_URI)
         db = client["sos-app"]
-        collection = db["sos"]
+        collection = db["sos_alerts"]
 
         # cursor = collection.find({})  # หาเอกสารทั้งหมด
         cursor = collection.find({}, {"image_data": 0})  # Excludes image_data from results

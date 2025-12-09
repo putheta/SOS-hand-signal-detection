@@ -7,7 +7,7 @@ from facedetection.v3_testing import process_face_image
 
 from bson.binary import Binary
 
-MONGO_URI = "mongodb+srv://Punyisa:Mail2004@sos-app.gqbtj58.mongodb.net/?retryWrites=true&w=majority&tls=true&appName=sos-app"
+MONGO_URI = "mongodb+srv://putheta_db_user:1ol0V9e7EaccVWI6@sos-cluster.rgwbko8.mongodb.net/?appName=SOS-Cluster"
 
 async def test_sending():
     try:

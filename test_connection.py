@@ -1,7 +1,7 @@
 from motor.motor_asyncio import AsyncIOMotorClient
 import asyncio
 
-MONGO_URI = "mongodb+srv://Punyisa:Mail2004@sos-app.gqbtj58.mongodb.net/?retryWrites=true&w=majority&appName=sos-app"
+MONGO_URI = "mongodb+srv://putheta_db_user:1ol0V9e7EaccVWI6@sos-cluster.rgwbko8.mongodb.net/?appName=SOS-Cluster"
 async def test_connection():
     try:
         
