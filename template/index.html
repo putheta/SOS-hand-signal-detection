@@ -20,5 +20,20 @@
         <img class="icon" src="static/map-pin.svg">
         <img class="icon" src="static/info.svg">
     </footer>
+
+<script>
+  const ws = new WebSocket("ws://localhost:3000");
+
+  ws.onmessage = (event) => {
+    const data = JSON.parse(event.data);
+    
+    alert("พบการเพิ่ม Node ใหม่ใน Database!");
+
+    const div = document.getElementById("log");
+    div.innerHTML += `
+      <p><b>New Node:</b> ${JSON.stringify(data)}</p>
+    `;
+  };
+</script>
 </body>
 </html>
