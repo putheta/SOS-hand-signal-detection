@@ -1,9 +1,8 @@
 from motor.motor_asyncio import AsyncIOMotorClient
 import asyncio
 import traceback
-
-from handdetection.version4 import detect_hand_sos
-from facedetection.v3_testing import process_face_image
+from handdetection.version5 import detect_hand_sos
+from facedetection.v4_testing import process_face_image
 
 from bson.binary import Binary
 
@@ -30,7 +29,7 @@ async def test_sending():
             image_data = f.read()
 
         data = {
-            "name": name,
+            "name": "person",
             "date": date,
             "time": time,
             "location": location
@@ -46,7 +45,7 @@ async def test_sending():
         print("✅ Inserted ID:", result.inserted_id)
 
     except Exception as e:
-        print("❌ Error sending data to MongoDB:")
+        print("❌ Error sending data to  MongoDB:")
         traceback.print_exc()
 
 # เรียกใช้งาน

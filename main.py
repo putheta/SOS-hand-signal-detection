@@ -22,4 +22,3 @@ Data = {
     "picture" : path
 }
 
-print(f"Data : {Data}")
