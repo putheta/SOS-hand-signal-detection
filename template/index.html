@@ -3,15 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
 </head>
 <body>
-    <h1 style="color: red;">SOS handsignals</h1>
-    <p>Name : {{data.name}}</p>
-    <p>Date : {{data.date}}</p>
-    <p>Time : {{data.time}}</p>
-    <p>location : {{data.location}}</p>
-    <img src="{{ data.path }}?v={{ data.time }}" alt="Detected image">
-    <p>data path : {{data.path}}</p>
+    <div class="header">
+        <img src="static/Frame 25.svg" alt="Logo">
+        <div class="status">
+            <img src="static/Group 12.svg" alt="Status">
+        </div>
+    </div>
+    <div class="content">
+        <p>ยังไม่มีรายงานในขณะนี้</p>
+    <footer>   
+        <img class="icon" src="static/home.svg">
+        <img class="icon" src="static/map-pin.svg">
+        <img class="icon" src="static/info.svg">
+    </footer>
 </body>
 </html>
