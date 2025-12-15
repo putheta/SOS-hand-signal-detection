@@ -48,7 +48,6 @@ ws.onmessage = (event) => {
 };
 
 function goDetail(id) {
-  window.location.href = `/template/detail.html?id=${id}`;
+  window.location.href = `template/detail.html?id=${id}`;
 }
-
 
