@@ -1,3 +1,4 @@
+from bson import Binary
 from motor.motor_asyncio import AsyncIOMotorClient
 import asyncio
 
@@ -8,9 +9,19 @@ async def test_connection():
         AsyncIOMotorClient(MONGO_URI, tls=True)
         client = AsyncIOMotorClient(MONGO_URI, serverSelectionTimeoutMS=5000)
         db = client["sos-app"]
-        collection = db["sos"]
+        collection = db["sos_alerts"]
 
-        doc = {"message": "🚨 Hello from another client (local)"}
+       
+        doc = {
+            "name": "test",
+            "date": "2025-12-12",
+            "time": "17:33:16",
+            "location": [
+                13.754,
+                100.5014
+            ],
+            "image_data": ""
+        }
         result = await collection.insert_one(doc)
         print("✅ Inserted ID:", result.inserted_id)
 

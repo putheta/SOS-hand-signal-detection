@@ -16,6 +16,7 @@ html,body {
     height: 5vh;
     position: fixed;
     width: 100%;
+    z-index:100; ;
 
 }
 .footer {
@@ -34,13 +35,13 @@ html,body {
 }
 
 .icon {
-    height: 25px;
-    width: 25px;
+    height: 24px;
+    width: 24px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
-.icon:hover {
+.icon-big {
     height: 30px;
     width: 30px;
 }
@@ -52,16 +53,132 @@ html,body {
     font-size: 24px;
     color: #aaaaaa;
     align-items: baseline;
-    padding-top: 10vh
+    padding-top: 10vh;
 }
 #log {
 width: 100%;
 word-wrap: break-word;
+padding-block: 20px;
 
 }
 
 #log p {
-    padding-inline: 50px;
-    margin-block: 30px;
-    font-size: 18px;
+    margin-block: 0;
+    font-size: 16px;
 }
+#log h5 {
+    margin-block: 0;
+    font-size: 16px;
+    color: rgb(255, 0, 0);
+}
+
+.log-container {
+    border: 2px solid #CCCCCC;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    margin-inline: 20px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+a
+.log-container:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+hr {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.row-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    background-color: transparent;
+    color: rgb(255, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: underline;
+    font-weight: 600;
+}
+.status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px !important;
+}
+
+.container {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-inline: 20px;
+    gap: 50px;
+    z-index: -100;
+
+}
+
+.call {
+    background-color: #ffa7a9;
+    color: white;
+    padding: 10px 20px;
+    margin-top:50px ;
+    position: fixed;
+    bottom: 85px;    
+    width: calc(100% - 40px);
+    cursor:unset;
+}
+.detail-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.detail-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.detail-card p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #7b7b7b;
+}
+
+.header-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-info img {
+    cursor: pointer;
+}
+
+#detailContent {
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+#chevron {
+  transition: transform 0.3s ease;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
