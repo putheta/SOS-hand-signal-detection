@@ -2,7 +2,7 @@
 
   ws.onopen = () => {
     console.log("WebSocket connected");
-    document.getElementById("logo").src = "static/Group 12.svg";
+    document.getElementById("logo").src = "static/Group-12.svg";
 
       if (!sessionStorage.getItem("wsReloaded")) {
         sessionStorage.setItem("wsReloaded", "true");
