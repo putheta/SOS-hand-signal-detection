@@ -232,6 +232,13 @@ button {
     .popup {
         width: 80%;
         height: auto;
+        overflow-y: auto;
+    }
+}
+@media (max-height: 700px) {
+    .popup {
+        max-height: 70%;
+        overflow-y: auto;
     }
 }
 
