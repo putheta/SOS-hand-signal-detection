@@ -65,6 +65,13 @@ async function startServer() {
     res.sendFile(path.join(__dirname, "template", "detail.html"));
   });
 
+  app.get("/info", (req, res) => {
+      res.sendFile(path.join(__dirname, "template", "info.html"));
+    });
+
+  app.get("/test", (req, res) => {
+    res.sendFile(path.join(__dirname, "template", "test-popup.html"));
+  });
   app.get("/sos/:id", async (req, res) => {
     try {
       const { id } = req.params;

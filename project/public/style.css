@@ -3,7 +3,7 @@ html,body {
     padding: 0;
     width: 100%;
     height: 100%;
-    
+    overflow: hidden !important;
 }
 
 .header {
@@ -54,11 +54,13 @@ html,body {
     color: #aaaaaa;
     align-items: baseline;
     padding-top: 10vh;
+    
 }
 #log {
 width: 100%;
 word-wrap: break-word;
 padding-block: 20px;
+
 
 }
 
@@ -81,7 +83,7 @@ padding-block: 20px;
     cursor: pointer;
     transition: box-shadow 0.3s ease;
 }
-a
+
 .log-container:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -115,7 +117,7 @@ button {
     font-size: 16px !important;
 }
 
-.container {
+.containerr {
     padding-top: 10vh;
     padding-bottom: 10vh;
     display: flex;
@@ -123,8 +125,6 @@ button {
     gap: 20px;
     padding-inline: 20px;
     gap: 50px;
-    z-index: -100;
-
 }
 
 .call {
@@ -182,3 +182,100 @@ button {
   transform: rotate(180deg);
 }
 
+.log-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 20px;
+}
+
+.log-img-container img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #e3e3e3;
+    border-radius: 5px;
+    padding: 5px;
+    margin-block: 5px;
+    cursor: pointer;
+    margin-inline: 20px;
+}
+
+.hide {
+  display: none !important;
+}
+
+
+.show {
+  display:flex;
+}
+.popup {
+    position: fixed;
+    z-index: 1000;
+    width: auto;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    border: 2px solid #e3e3e3;
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-60%);
+    background-color: white;
+    box-shadow: 1px -2px 3px rgba(0, 0, 0, 0.1);
+
+}
+
+@media (max-width: 600px) {
+    .popup {
+        width: 80%;
+        height: auto;
+        transform: translate(-50%,-60%);
+    }
+}
+
+.popup img {
+    max-width: 100%;
+}
+
+li {
+    margin-block: 10px;
+}
+
+.discription {
+    font-size: small;
+    color: #555;
+    margin-top: 10px;
+    text-align: center;
+    padding-inline: 20px;
+    margin-bottom: 10px;
+}
+
+ul {
+    padding-inline: 25px;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(7px);
+    z-index: 999;
+}
+
+.close-button {
+    background-color: #ff383c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}

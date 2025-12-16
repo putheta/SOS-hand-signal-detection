@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Information</title>
+</head>
+<body>
+    <div class="header">
+        <img src="/static/Frame-25.svg" alt="Logo">
+        <div class="status">
+            <img id="logo" src="/static/Group-12.svg" alt="Status">
+        </div>
+    </div>
+    <div class="background hide">
+        <div id="popup" class="popup">
+            <img id="popupImage" src="/static/banner-introduction.svg">
+            <h3 id="popupTitle">คำแนะนำการใช้งานแอปพลิเคชัน</h3>
+
+            <div id="popupContent"></div>
+
+            <button id="close-button" class="close-button">ปิด</button>
+        </div>
+    </div>
+
+
+
+    <div class="log-content">
+        <div id="log">
+
+            <div class="log-img-container">
+            <img
+                class="banner"
+                data-type="intro"
+                src="/static/banner-introduction.svg">
+            </div>
+
+            <div class="log-img-container">
+            <img
+                class="banner"
+                data-type="info"
+                src="/static/banner-info.svg">
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer">   
+        <img onclick="window.location.href='/'" class="icon" src="/static/home.svg">
+        <img style="opacity: 0.5;" class="icon" src="/static/map-pin.svg">
+        <img class="icon-big" src="/static/info.svg">
+    </div>
+<script src="info.js">
+</script>
+</body>
+</html>
