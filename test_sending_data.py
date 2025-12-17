@@ -32,7 +32,8 @@ async def test_sending():
             "name": "person",
             "date": date,
             "time": time,
-            "location": location
+            #"location": location
+            "location": [13.683342, 100.610386]
             ,"image_data" : Binary(image_data)
             #, "path": url_path
         }
@@ -48,5 +49,4 @@ async def test_sending():
         print("❌ Error sending data to  MongoDB:")
         traceback.print_exc()
 
-# เรียกใช้งาน
 asyncio.run(test_sending())

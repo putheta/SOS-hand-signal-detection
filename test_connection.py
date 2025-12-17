@@ -17,8 +17,8 @@ async def test_connection():
             "date": "2025-12-12",
             "time": "17:33:16",
             "location": [
-                13.754,
-                100.5014
+                13.683342,
+                100.610386
             ],
             "image_data": ""
         }

@@ -125,6 +125,7 @@ button {
     gap: 20px;
     padding-inline: 20px;
     gap: 50px;
+    overflow: auto;
 }
 
 .call {
