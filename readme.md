@@ -8,6 +8,10 @@ A distress-signal detection system that uses MediaPipe hand tracking and machine
 
 This project detects a recognized SOS hand signal from a camera feed and triggers an alert when it's identified, aiming to provide a non-verbal, camera-based way to signal distress. It combines computer vision, a trained ML model, and a backend service for logging and alerting.
 
+## Project Poster
+
+![Project poster](./A4.png)
+
 ## How It Works
 
 1. **Hand detection** — MediaPipe Hands tracks hand landmarks from the camera feed.
