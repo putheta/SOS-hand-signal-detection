@@ -4,6 +4,8 @@ A distress-signal detection system that uses MediaPipe hand tracking and machine
 
 ![python](https://img.shields.io/badge/Python-70%25-blue) ![opencv](https://img.shields.io/badge/OpenCV-CV-red) ![mediapipe](https://img.shields.io/badge/MediaPipe-Hands-orange) ![fastapi](https://img.shields.io/badge/FastAPI-Backend-teal)
 
+🏆 **Top 10 Finalist** — AI & Robotics Hackathon and Competitions 2025: Visionaries Pitching
+
 ## Overview
 
 This project detects a recognized SOS hand signal from a camera feed and triggers an alert when it's identified, aiming to provide a non-verbal, camera-based way to signal distress. It combines computer vision, a trained ML model, and a backend service for logging and alerting.
